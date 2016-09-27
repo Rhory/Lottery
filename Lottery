@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void)
+
+{
+
+//INPUT THE NUMBER OF PLAYERS//
+
+	int NumberofPlayers;
+
+	printf("How many players are in the Lottery?\n");
+
+	scanf("%d", &NumberofPlayers);
+
+
+//The following reads in the player's name and allows them to choose //
+// their lottery numbers or have random ones and stores them in array//
+
+printf("Would you like to choose your five lottery number (c) or be assigned five random ones (r)? \n");
+
+char ChooseRand;
+
+fflush(stdin);
+scanf(" %c", &ChooseRand);
+
+
+
+if (ChooseRand == 'c')
+{
+	   char str1[20] ; //twenty chatacters max for name length
+	   int array[5]; //five lottery numbers to fill array[5]
+
+   printf("Enter name: "); //enter name of player 1
+   scanf("%s", str1);
+
+   printf("Enter your Lottery Numbers: "); //enter the lottery numbers of player one
+   scanf("%d %d %d %d %d", &array[0], &array[1], &array[2], &array[3], &array[4]);
+
+   printf("Entered Name: %s.\n", str1); // shows the name and numbers are entered correctly
+   printf("%s's lottery numbers are %d, %d, %d, %d and %d.\n", str1, array[0], array[1], array[2], array[3], array[4]);
+ 
+ }  
+
+ else if (ChooseRand == 'r')
+
+ {
+
+
+ }
+
+else
+{
+	printf("This is not a valid choice.");
+}
+
+   return(0);
+
+}
